@@ -2,31 +2,21 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Game</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Click Me!</title>
 </head>
-
 <body>
-  <h1>Hey PiKuu!</h1>
-  <p>Click the button below 👇</p>
+  <h1>🎈 Pop all the Balloons! 🎈</h1>
+  <p>Click all 5 balloons to reveal your birthday message 🎁</p>
 
-  <button onclick="showMessage()">Click Me</button>
+  <div class="game-area" id="game-area">
+    <!-- Balloons will appear here -->
+  </div>
 
-  <div id="message">🎉 Happy Birthday!! 🎂💖</div>
+  <div id="message" class="hidden">🎉 Happy Birthday, PiKuu! 🎂💖</div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-  function showMessage() {
-    document.getElementById("message").style.display = "block";
-
-    // 🎉 Trigger confetti!
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
-  }
-</script>
-
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
