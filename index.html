@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Game</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make a Wish 🎂</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>🎈 Pop all the Balloons! 🎈</h1>
-  <p>Click all 5 balloons to reveal your birthday message 🎁</p>
+  <div class="container">
+    <h1>Make a Wish 🎂</h1>
 
-  <div class="game-area" id="game-area">
-    <!-- Balloons will appear here -->
+    <div class="cake">
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+    </div>
+
+    <p id="instruction">Blow gently into your mic to put out the candle 🕯️</p>
+
+    <div id="message" class="hidden">🎉 Happy Birthday, PiKuu! 🎂💖</div>
   </div>
-
-  <div id="message" class="hidden">🎉 Happy Birthday, PiKuu! 🎂💖</div>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>

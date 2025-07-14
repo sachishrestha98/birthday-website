@@ -1,49 +1,76 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fff0f5;
-  text-align: center;
-  padding: 2rem;
   margin: 0;
-}
-
-.game-area {
+  padding: 0;
+  background-color: #ffe6f0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
+  align-items: center;
+  height: 100vh;
 }
 
-.balloon {
-  width: 80px;
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #cc0066;
+}
+
+.cake {
+  margin: 40px auto;
+  width: 100px;
   height: 100px;
-  background-color: pink;
-  border-radius: 50% 50% 50% 50%;
+  background: #ff69b4;
+  border-radius: 10px;
   position: relative;
-  cursor: pointer;
-  transition: transform 0.2s;
 }
 
-.balloon:hover {
-  transform: scale(1.1);
-}
-
-.balloon::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  width: 2px;
+.candle {
+  width: 10px;
   height: 30px;
-  background-color: gray;
+  background: white;
+  position: absolute;
+  top: -30px;
+  left: 45px;
+  border-radius: 2px;
+}
+
+.flame {
+  width: 12px;
+  height: 12px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: -1px;
+  animation: flicker 0.3s infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+  50% { transform: scale(1.2) translateY(-2px); opacity: 0.8; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+#message {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #cc0066;
 }
 
 .hidden {
   display: none;
 }
 
-#message {
-  font-size: 2rem;
-  margin-top: 3rem;
-  color: #cc0066;
+#instruction {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #333;
 }
