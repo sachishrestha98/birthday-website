@@ -24,7 +24,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
       let volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
       // If loud enough = blowing
-      if (volume > 35 && flame.style.display !== "none") {
+      if (volume > 65 && flame.style.display !== "none") {
         blowCandle();
       }
 
